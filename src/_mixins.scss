@@ -1,0 +1,74 @@
+// 131921
+// Write all variables here
+$bg_1: rgb(234, 237, 237);
+// color's here
+$clr_1: #f0f6f6;
+
+$clr_2: #bbe6e4;
+
+$clr_3: #42bfdd;
+
+$clr_4: #febd69;
+
+$clr_5: #131921;
+
+// $clr_6: #;
+// ------------------------white and black------------------------------
+$clr_white: #fff;
+$clr_black: #000;
+
+// Heading
+$big_heading_1: 5rem;
+$big_heading_2: 4rem;
+$big_heading_3: 3rem;
+$big_heading_4: 2.5rem;
+// paragraph
+$big_para_1: 2rem;
+$big_para_2: 1.8rem;
+// All bg mixins here-------------------
+// black and white
+@mixin bg_black($alfa_opacity: 1, $first: 0, $second: 0, $third: 0) {
+  background-color: rgba($first, $second, $third, $alfa_opacity);
+}
+@mixin bg_white($alfa_opacity: 1, $first: 255, $second: 255, $third: 255) {
+  background-color: rgba($first, $second, $third, $alfa_opacity);
+}
+
+// write all mixins here
+
+// Flex-box-----------------------------
+@mixin flex($direction: row, $justify: center, $align: center) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+}
+// ------------------------------------
+
+// Grid--------------------------------
+@mixin grid($place: center) {
+  display: grid;
+  place-items: $place;
+}
+
+// Postition absolute------------------
+@mixin absolute($top: 0, $right: 0, $bottom: 0, $left: 0) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+// absolute center-----------------------
+@mixin abs_center() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+// Text Transparent ---------------------------------------
+@mixin text_gradient($first_color, $second_color) {
+  background: linear-gradient($first_color, $second_color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

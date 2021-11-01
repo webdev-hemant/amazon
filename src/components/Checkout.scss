@@ -1,0 +1,53 @@
+@import "../mixins";
+.checkout_compo_wrapper {
+  //   margin-top: 1rem;
+  min-height: 100vh;
+  padding-top: 3rem;
+  background-color: #fff;
+  .checkout_ban_and_basket_wrapper {
+    .banner_checkout {
+      img {
+        width: 100%;
+      }
+    }
+    .basket_wrapper {
+      //   h2{}
+      .underline {
+        width: 100%;
+        height: 0.1rem;
+        background-color: #000;
+      }
+      // .all_basket_itemsL{
+      //   .checkout_cart__items{
+
+      //   }
+      // }
+    }
+  }
+  .card_total_wrapper {
+    height: 18rem;
+    background-color: $bg_1;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    h2 {
+      font-weight: bold;
+    }
+    .checkbox_wrapper {
+      margin-top: auto;
+      input {
+        margin: 0.3rem 0.5rem 0 1rem;
+      }
+      label {
+        font-size: 1.6rem;
+      }
+    }
+    button {
+      padding: 1rem 0;
+      font-size: 1.6rem;
+      font-weight: 600;
+      width: 100%;
+      margin-top: auto;
+    }
+  }
+}

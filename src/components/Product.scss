@@ -1,0 +1,36 @@
+@import "../mixins";
+.product_wrapper {
+  &:hover {
+    transition: 0.3s;
+    box-shadow: 1px 3px 41px -6px rgba(0, 0, 0, 0.81);
+    -webkit-box-shadow: 1px 3px 41px -6px rgba(0, 0, 0, 0.81);
+    -moz-box-shadow: 1px 3px 41px -6px rgba(0, 0, 0, 0.81);
+    transform: scale(1.02);
+  }
+  .product {
+    overflow: hidden;
+    padding: 1rem;
+    min-height: 30rem;
+    background-color: #fff;
+    // .product_heading {
+    // }
+    // .product_pricing {
+    // }
+    .product_rating {
+      display: flex;
+    }
+    figure {
+      width: 100%;
+      @include flex(row, flex-start);
+      img {
+        max-width: 20rem;
+        max-height: 30rem;
+        object-fit: contain;
+        transition: 0.3s;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

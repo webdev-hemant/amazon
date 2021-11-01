@@ -1,0 +1,84 @@
+@import "../mixins";
+.home_wrapper {
+  .home {
+    max-width: 150rem;
+    position: relative;
+    .slider_custom {
+      height: 92vh;
+      margin-bottom: 4rem;
+      .awssld__bullets {
+        display: none;
+      }
+    }
+    img {
+      width: 100%;
+      height: 91vh;
+      // mask-image: linear-gradient(
+      //   to bottom,
+      //   rgba(0, 0, 0, 1),
+      //   rgba(0, 0, 0, 0)
+      // );
+      object-fit: cover;
+    }
+    .animation_schroll {
+      width: 5rem;
+      height: 5rem;
+      box-sizing: border-box;
+      // border: 2px solid transparent;
+      position: absolute;
+      bottom: 10%;
+      left: 50%;
+      z-index: 9;
+      border-radius: 50% 50% 50% 10%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      // animation: float-1 2s infinite;
+      &::before {
+        content: "Schroll Down";
+        font-family: "Lobster", cursive;
+        font-weight: 400;
+        font-size: 1.8rem;
+        width: 11rem;
+        height: 3rem;
+        border-radius: 1rem;
+        background-color: $clr_4;
+        color: $clr_5;
+        position: absolute;
+        bottom: -3rem;
+        right: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(45deg);
+        animation: float-2 2s infinite;
+      }
+      @keyframes float-1 {
+        0% {
+          box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+          transform: rotate(-45deg) translatey(-25px);
+        }
+        50% {
+          box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+          transform: rotate(-45deg) translatey(-35px);
+        }
+        100% {
+          box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+          transform: rotate(-45deg) translatey(-25px);
+        }
+      }
+      @keyframes float-2 {
+        0% {
+          box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+          transform: rotate(45deg) translatey(0px);
+        }
+        50% {
+          box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+          transform: rotate(45deg) translatey(10px);
+        }
+        100% {
+          box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+          transform: rotate(45deg) translatey(0px);
+        }
+      }
+    }
+  }
+}

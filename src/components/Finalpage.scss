@@ -1,0 +1,21 @@
+@import "../mixins";
+
+.final_page__wrapper {
+  margin-bottom: 2rem;
+  min-height: 80vh;
+  font-family: "Lobster", cursive;
+  h2 {
+    margin: 2rem;
+    font-size: 3rem;
+  }
+  h3 {
+    margin: 1rem 0;
+    font-size: 2.5rem;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+  h4 {
+    margin: 1rem 0;
+    font-size: 2.2rem;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+}

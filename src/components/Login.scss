@@ -1,0 +1,140 @@
+@import "../mixins";
+
+.login_wrapper {
+  background-color: #fff;
+  min-height: 97vh;
+  .useName_wrapper {
+    height: 100% !important;
+    @include flex;
+    .using_name {
+      padding: 2rem;
+      box-sizing: border-box;
+      border: 2px solid rgba(151, 124, 124, 0.24);
+      border-radius: 0.6rem;
+      min-height: 70%;
+      @include flex(column);
+      img {
+        margin: 2rem 0;
+      }
+      input {
+        width: 100%;
+        padding: 0 1rem;
+      }
+      .usingName {
+        margin: 1.5rem 0;
+        padding: 0 4rem;
+        height: 3rem;
+        border: 2px solid rgba(151, 124, 124, 0.24);
+        background-color: $clr_4;
+        &:hover {
+          background-color: rgb(255, 173, 65);
+        }
+      }
+    }
+  }
+  .center_divider {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    .divider {
+      width: 0.1rem;
+      height: 100%;
+      background-color: black;
+      position: relative;
+      &::before {
+        content: "OR";
+        background-color: #fff;
+        font-weight: 600;
+        font-size: 2rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+  .login_container {
+    // padding: 3rem;
+    min-height: 40rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    img {
+      width: 12rem;
+    }
+    .form_wrapper {
+      margin-top: 1rem;
+      box-sizing: border-box;
+      border: 2px solid rgba(151, 124, 124, 0.24);
+      border-radius: 0.5rem;
+      padding: 2rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      h2 {
+        font-size: 3rem;
+        font-weight: 500;
+      }
+      label {
+        margin-top: 1rem;
+        font-weight: bolder;
+      }
+      input {
+        height: 3rem;
+        border: 2px solid rgba(151, 124, 124, 0.24);
+        width: 100%;
+        border-radius: 0.3rem;
+        padding: 0.5rem;
+        margin-top: 0.3rem;
+      }
+
+      button {
+        margin: 1.5rem 0;
+        height: 3rem;
+        border: 2px solid rgba(151, 124, 124, 0.24);
+        background-color: $clr_4;
+        &:hover {
+          background-color: rgb(255, 173, 65);
+        }
+      }
+      p {
+        font-size: 1.4rem;
+        font-weight: 500;
+      }
+      .view_pass {
+        display: flex;
+        #passShow {
+          width: 1.5rem;
+          margin-right: 0.5rem;
+        }
+        .viewPassBtn {
+          margin-top: 0.2rem;
+          padding: 0;
+          border: none;
+          background-color: #fff;
+        }
+      }
+    }
+    .new_to_amazon_wrapper {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      p {
+        font-size: 1.6rem;
+      }
+      button {
+        width: auto;
+        padding: 0 3rem;
+        border: 2px solid rgba(151, 124, 124, 0.24);
+        height: 3rem;
+        border-radius: 0.3rem;
+      }
+    }
+  }
+}
+// .credit {
+//   display: none;
+// }
